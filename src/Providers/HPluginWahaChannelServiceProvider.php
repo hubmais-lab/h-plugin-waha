@@ -16,7 +16,7 @@ class HPluginWahaChannelServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/h-waha.php', 'h-waha');
+        $this->mergeConfigFrom(__DIR__.'/../../config/h-waha.php', 'h-waha');
 
         $this->app->singleton(Client::class, function ($app) {
             $config = $app['config']['h-waha'];
@@ -51,7 +51,7 @@ class HPluginWahaChannelServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/h-waha.php' => $this->app->configPath('h-waha.php'),
+                __DIR__.'/../../config/h-waha.php' => $this->app->configPath('h-waha.php'),
             ], 'vonage');
         }
     }
