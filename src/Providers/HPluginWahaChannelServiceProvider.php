@@ -1,5 +1,5 @@
 <?php
-namespace Hubmais\HPluginWaha;
+namespace Hubmais\HPluginWaha\Providers;
 
 use Hubmais\HPluginWaha\Channels\HPluginWahaChannel;
 use Hubmais\HPluginWaha\Client;
