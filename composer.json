@@ -1,0 +1,45 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "hubmais/h-plugin-waha",
+    "description": "Plugin Laravel to send notification to WhatsApp via Waha",
+    "keywords": [
+        "laravel",
+        "notifications",
+        "waha",
+        "hubmais"
+    ],
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "guzzlehttp/guzzle": "^7.2",
+        "illuminate/notifications": "^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^5.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hubmais\\HPluginWaha\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubmais\\HPluginWaha\\Providers\\HPluginWahaChannelServiceProvider"
+            ],
+            "aliases": {
+                "HPluginWaha": "Hubmais\\HPluginWaha\\Facades\\HPluginWaha"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
