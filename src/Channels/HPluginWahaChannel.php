@@ -38,21 +38,18 @@ class HPluginWahaChannel
         if(empty($to))
             return $to;
 
-        try
-        {
+        $exists = $this->client->checkExists(
+            $to,
+            $session,
+        );
+
+        if($exists['numberExists'])
             return $this->client->sendText(
                 $session,
-                $to,
+                $exists['chatId'],
                 trim($message->content),
             );
-        }
-        catch(\Exception $ex)
-        {
-            return $this->client->sendText(
-                $session,
-                substr($to, 0, 4).'9'.substr($to, 4),
-                trim($message->content),
-            );
-        }
+        
+        return;
     }
 }
