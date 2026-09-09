@@ -38,10 +38,21 @@ class HPluginWahaChannel
         if(empty($to))
             return $to;
 
-        return $this->client->sendText(
-            $session,
-            $to,
-            trim($message->content),
-        );
+        try
+        {
+            return $this->client->sendText(
+                $session,
+                $to,
+                trim($message->content),
+            );
+        }
+        catch(\Exception $ex)
+        {
+            return $this->client->sendText(
+                $session,
+                substr($to, 0, 4).'9'.substr($to, 4),
+                trim($message->content),
+            );
+        }
     }
 }
