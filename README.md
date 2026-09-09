@@ -110,7 +110,8 @@ class User extends Authenticatable
      */
     public function routeNotificationForHWaha(Notification $notification): array|string
     {
-        return $this->phone_number.'@c.us';
+        // Ex: 551199990000
+        return $this->phone_number;
     }
 }
 ```

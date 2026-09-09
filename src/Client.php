@@ -13,19 +13,39 @@ class Client
     {
     }
 
+    private function request()
+    {
+        return Http::baseUrl("{$this->host}:{$this->port}/api")
+        ->withHeaders([
+            'X-Api-Key' => $this->apiKey,
+        ]);
+    }
+
+    function checkExists(
+        string $phone,
+        string $session
+    )
+    {
+        return $this->request()
+        ->post("/contacts/check-exists", [
+            'phone' => $phone,
+            'session' => $session
+        ])
+        ->json();
+    }
+
     function sendText(
         string $session,
         string $chatId,
         string $text
     )
     {
-        return Http::withHeaders([
-            'X-Api-Key' => $this->apiKey,
-        ])->post("{$this->host}:{$this->port}/api/sendText", [
+        return $this->request()
+        ->post("/sendText", [
             'chatId' => $chatId,
             'text' => $text,
             'session' => $session
         ])
-        ->json();;
+        ->json();
     }
 }
