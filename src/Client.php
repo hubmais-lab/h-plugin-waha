@@ -18,7 +18,8 @@ class Client
         return Http::baseUrl("{$this->host}:{$this->port}/api")
         ->withHeaders([
             'X-Api-Key' => $this->apiKey,
-        ]);
+        ])
+        ->throw();
     }
 
     function checkExists(
