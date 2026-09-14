@@ -27,7 +27,7 @@ class Client
     )
     {
         return $this->request()
-        ->post("/contacts/check-exists", [
+        ->get("/contacts/check-exists", [
             'phone' => $phone,
             'session' => $session
         ])
