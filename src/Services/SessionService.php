@@ -70,7 +70,7 @@ class SessionService extends AbstractService
         if(empty($session))
             $session = $this->getSession();
 
-        return $this->client->get("/api/sessions/{$session}/start");
+        return $this->client->post("/api/sessions/{$session}/start");
     }
 
     function stop(?string $session = null)
@@ -78,7 +78,7 @@ class SessionService extends AbstractService
         if(empty($session))
             $session = $this->getSession();
 
-        return $this->client->get("/api/sessions/{$session}/stop");
+        return $this->client->post("/api/sessions/{$session}/stop");
     }
 
     function logout(?string $session = null)
@@ -86,7 +86,7 @@ class SessionService extends AbstractService
         if(empty($session))
             $session = $this->getSession();
 
-        return $this->client->get("/api/sessions/{$session}/logout");
+        return $this->client->post("/api/sessions/{$session}/logout");
     }
 
     function restart(?string $session = null)
@@ -94,7 +94,7 @@ class SessionService extends AbstractService
         if(empty($session))
             $session = $this->getSession();
         
-        return $this->client->get("/api/sessions/{$session}/restart");
+        return $this->client->post("/api/sessions/{$session}/restart");
     }
 
     /**
