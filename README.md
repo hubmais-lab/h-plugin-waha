@@ -31,7 +31,7 @@ Depois é necessário configurar o arquivo de configuração, presente em config
 
 ***
 
-# Exemplos de uso
+# Exemplo de uso da Notificação
 
 ## Crie uma notificação
 
@@ -73,7 +73,7 @@ class InvoicePaid extends Notification
      */
     public function via(object $notifiable): array
     {
-        return ['h-waha'];
+        return ['h-waha-channel'];
     }
 
     /**
@@ -127,3 +127,7 @@ $user->notify(new InvoicePaid($invoice));
 
 ...
 ```
+
+# Exemplo de uso da biblioteca
+
+## Inicializando

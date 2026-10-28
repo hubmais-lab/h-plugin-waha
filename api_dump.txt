@@ -1,0 +1,249 @@
+[2026-10-26T19:41:01+00:00]
+{
+    "_data": {
+        "id": {
+            "fromMe": true,
+            "remote": "62582052384963@lid",
+            "id": "3EB06026D5E0DD8E02B519",
+            "self": "out",
+            "$1": "true_62582052384963@lid_3EB06026D5E0DD8E02B519_out",
+            "_serialized": "true_62582052384963@lid_3EB06026D5E0DD8E02B519_out"
+        },
+        "viewed": false,
+        "body": "Teste de envio de mensagem",
+        "type": "chat",
+        "t": 1793043662,
+        "from": {
+            "server": "lid",
+            "user": "62582052384963",
+            "_serialized": "62582052384963@lid"
+        },
+        "to": {
+            "server": "lid",
+            "user": "62582052384963",
+            "_serialized": "62582052384963@lid"
+        },
+        "ack": 0,
+        "isNewMsg": true,
+        "star": false,
+        "kicNotified": false,
+        "isFromTemplate": false,
+        "isAdsMedia": false,
+        "pollInvalidated": false,
+        "isSentCagPollCreation": false,
+        "latestEditMsgKey": null,
+        "latestEditSenderTimestampMs": null,
+        "mentionedJidList": [],
+        "groupMentions": [],
+        "isEventCanceled": false,
+        "eventInvalidated": false,
+        "isVcardOverMmsDocument": false,
+        "isCaptionByUser": false,
+        "isForwarded": false,
+        "isQuestion": false,
+        "isSpoiler": false,
+        "questionReplyQuotedMessage": null,
+        "questionResponsesCount": 0,
+        "readQuestionResponsesCount": 0,
+        "forwardsCount": 0,
+        "hasReaction": false,
+        "newsletterAdminProfile": null,
+        "disappearingModeInitiator": "chat",
+        "disappearingModeTrigger": "chat_settings",
+        "messageSecret": [
+            254,
+            33,
+            39,
+            47,
+            9,
+            180,
+            57,
+            2,
+            73,
+            205,
+            175,
+            17,
+            67,
+            107,
+            126,
+            11,
+            105,
+            206,
+            110,
+            173,
+            2,
+            133,
+            251,
+            249,
+            129,
+            69,
+            114,
+            58,
+            195,
+            131,
+            174,
+            214
+        ],
+        "productHeaderImageRejected": false,
+        "lastPlaybackProgress": 0,
+        "isDynamicReplyButtonsMsg": false,
+        "isCarouselCard": false,
+        "parentMsgId": null,
+        "callSilenceReason": null,
+        "isVideoCall": false,
+        "callDuration": null,
+        "callCreator": null,
+        "callParticipants": null,
+        "isCallLink": null,
+        "callLinkToken": null,
+        "terminatedByDeviceSwitch": null,
+        "selfOtherDeviceConnected": null,
+        "bytesSent": null,
+        "bytesReceived": null,
+        "isMdHistoryMsg": false,
+        "stickerSentTs": 0,
+        "isAvatar": false,
+        "lastUpdateFromServerTs": 0,
+        "invokedBotWid": null,
+        "metaFrom": null,
+        "bizBotType": null,
+        "botDeepLinkToken": null,
+        "aiMediaCollectionInfo": null,
+        "expectedImageCount": null,
+        "expectedVideoCount": null,
+        "botResponseTargetId": null,
+        "botResponseId": null,
+        "botPluginType": null,
+        "botPluginReferenceIndex": null,
+        "botPluginSearchProvider": null,
+        "botPluginSearchUrl": null,
+        "botPluginSearchQuery": null,
+        "botPluginMaybeParent": false,
+        "botReelPluginThumbnailCdnUrl": null,
+        "botMessageDisclaimerText": null,
+        "botSessionTransparencyType": null,
+        "botMsgBodyType": null,
+        "hatchMetadataSync": null,
+        "requiresDirectConnection": null,
+        "bizContentPlaceholderType": null,
+        "hostedBizEncStateMismatch": false,
+        "aeaAutoUpgrade": false,
+        "senderOrRecipientAccountTypeHosted": false,
+        "placeholderCreatedWhenAccountIsHosted": false,
+        "groupHistoryBundleMessageKey": null,
+        "groupHistoryBundleMetadata": null,
+        "groupHistoryIndividualMessageInfo": null,
+        "nonJidMentions": null,
+        "links": []
+    },
+    "id": {
+        "fromMe": true,
+        "remote": "62582052384963@lid",
+        "id": "3EB06026D5E0DD8E02B519",
+        "self": "out",
+        "$1": "true_62582052384963@lid_3EB06026D5E0DD8E02B519_out",
+        "_serialized": "true_62582052384963@lid_3EB06026D5E0DD8E02B519_out"
+    },
+    "ack": 0,
+    "hasMedia": false,
+    "body": "Teste de envio de mensagem",
+    "type": "chat",
+    "timestamp": 1793043662,
+    "from": "62582052384963@lid",
+    "to": "62582052384963@lid",
+    "deviceType": "web",
+    "isForwarded": false,
+    "forwardingScore": 0,
+    "isStatus": false,
+    "isStarred": false,
+    "fromMe": true,
+    "hasQuotedMsg": false,
+    "hasReaction": false,
+    "vCards": [],
+    "mentionedIds": [],
+    "groupMentions": [],
+    "isGif": false,
+    "links": []
+}
+
+[2026-10-26T19:41:01+00:00]
+[
+    {
+        "name": "session_01m3p7aaw46cx2654ncqwf3d5p",
+        "status": "WORKING",
+        "config": {
+            "metadata": [],
+            "webhooks": [],
+            "webjs": {
+                "tagsEventsOn": false
+            },
+            "client": null
+        },
+        "me": {
+            "id": "554192020562@c.us",
+            "lid": "62582052384963@lid",
+            "pushName": "Maicon Fernando  Tomazi",
+            "reachoutTimelock": null,
+            "messageCapping": {
+                "cappingStatus": "NONE",
+                "totalQuota": -1,
+                "usedQuota": 0,
+                "cycleStart": 1790823600,
+                "cycleEnd": 1793501999,
+                "mvStatus": "NOT_ELIGIBLE",
+                "oteStatus": "NOT_ELIGIBLE"
+            }
+        },
+        "presence": "online",
+        "timestamps": {
+            "activity": 1793043662481
+        },
+        "assignedWorker": ""
+    }
+]
+
+[2026-10-26T19:41:01+00:00]
+{
+    "name": "session_01m3p7aaw46cx2654ncqwf3d5p",
+    "status": "WORKING",
+    "config": {
+        "metadata": [],
+        "webhooks": [],
+        "webjs": {
+            "tagsEventsOn": false
+        },
+        "client": null
+    },
+    "me": {
+        "id": "554192020562@c.us",
+        "lid": "62582052384963@lid",
+        "pushName": "Maicon Fernando  Tomazi",
+        "reachoutTimelock": null,
+        "messageCapping": {
+            "cappingStatus": "NONE",
+            "totalQuota": -1,
+            "usedQuota": 0,
+            "cycleStart": 1790823600,
+            "cycleEnd": 1793501999,
+            "mvStatus": "NOT_ELIGIBLE",
+            "oteStatus": "NOT_ELIGIBLE"
+        }
+    },
+    "presence": "online",
+    "timestamps": {
+        "activity": 1793043662481
+    },
+    "engine": {
+        "engine": "WEBJS",
+        "WWebVersion": "2.3000.1051174744",
+        "state": "CONNECTED"
+    }
+}
+
+[2026-10-26T19:41:01+00:00]
+{
+    "id": "554192020562@c.us",
+    "name": "Maicon Fernando  Tomazi",
+    "picture": "https:\/\/pps.whatsapp.net\/v\/t61.24694-24\/661465013_1425384935481015_4913902681203345440_n.jpg?ccb=11-4&oh=01_Q5Aa5wE5t8QhRMJxlqsl5urqt3HHoOv2W8EhRoUX_FgZ0hXfWQ&oe=6AEC9AB5&_nc_sid=5e03e0&_nc_cat=101"
+}
+
