@@ -1,7 +1,9 @@
 <?php
+declare(strict_types=1);
+
 namespace Hubmais\HPluginWaha\Facades;
 
-use Hubmais\HPluginWaha\Client;
+use Hubmais\HPluginWaha\Services\Manager as HPluginWahaService;
 use Illuminate\Support\Facades\Facade;
 
 class HPluginWaha extends Facade
@@ -13,6 +15,6 @@ class HPluginWaha extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return Client::class;
+        return HPluginWahaService::class;
     }
 }

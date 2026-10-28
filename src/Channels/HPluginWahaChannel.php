@@ -1,20 +1,14 @@
 <?php
+declare(strict_types=1);
+
 namespace Hubmais\HPluginWaha\Channels;
 
-use Hubmais\HPluginWaha\Client;
+use Hubmais\HPluginWaha\Facades\HPluginWaha;
 use Hubmais\HPluginWaha\Messages\HPluginWahaMessage;
 use Illuminate\Notifications\Notification;
 
 class HPluginWahaChannel
 {
-    function __construct(
-        protected Client $client,
-        protected ?string $session = null,
-    )
-    {
-
-    }
-
     /**
      * Send the given notification.
      * 
@@ -27,24 +21,24 @@ class HPluginWahaChannel
         if (is_string($message))
             $message = new HPluginWahaMessage($message);
 
-        $session = $message->session ?: $this->session;
+        $session = $message->session ?: HPluginWaha::getSession();
         if(empty($session))
             $session = 'default';
 
         $to = $message->to;
         if(empty($to))
-            $to = $notifiable->routeNotificationFor('h-waha', $notification);
+            $to = $notifiable->routeNotificationFor('h-waha-channel', $notification);
 
         if(empty($to))
             return $to;
 
-        $exists = $this->client->checkExists(
+        $exists = HPluginWaha::contacts()->checkExists(
             $to,
             $session,
         );
 
         if($exists['numberExists'])
-            return $this->client->sendText(
+            return HPluginWaha::chatting()->sendText(
                 $session,
                 $exists['chatId'],
                 trim($message->content),
