@@ -12,6 +12,11 @@ class Manager extends AbstractService
         return new SessionService($this->client, $this->session);
     }
 
+    function pairing(): PairingService
+    {
+        return new PairingService($this->client, $this->session);
+    }
+
     function profile(): ProfileService
     {
         return new ProfileService($this->client, $this->session);
