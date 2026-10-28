@@ -26,7 +26,7 @@ class HPluginWahaChannelServiceProvider extends ServiceProvider
 
             return new Client(
                 $config['host'],
-                $config['port'],
+                intval($config['port']),
                 $config['api_key'],
                 @$config['timeout']?: intval($config['timeout']),
             );
