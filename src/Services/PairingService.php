@@ -69,6 +69,6 @@ class PairingService extends AbstractService
         if(empty($session))
             $session = $this->getSession();
 
-        return $this->client->requestRaw('GET', "/{$session}/screenshot");
+        return $this->client->requestRaw('GET', "/api/screenshot", get_defined_vars());
     }
 }
