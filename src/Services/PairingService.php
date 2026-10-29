@@ -64,11 +64,15 @@ class PairingService extends AbstractService
         return $this->client->post("/api/{$session}/auth/passkey/confirm");
     }
 
-    function screenshot(?string $session = null): string
+    /**
+     * 
+     * @return array{mimetype:string,data:string}
+     */
+    function screenshot(?string $session = null)
     {
         if(empty($session))
             $session = $this->getSession();
 
-        return $this->client->requestRaw('GET', "/api/screenshot", get_defined_vars());
+        return $this->client->get("/api/screenshot", get_defined_vars());
     }
 }
