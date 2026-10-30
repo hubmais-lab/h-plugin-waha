@@ -7,6 +7,10 @@ use Hubmais\HPluginWaha\Support\AbstractService;
 
 class PairingService extends AbstractService
 {
+    /**
+     * 
+     * @return array{mimetype:string,data:string}
+     */
     function qr(?string $session = null)
     {
         if(empty($session))

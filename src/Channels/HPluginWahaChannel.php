@@ -27,21 +27,21 @@ class HPluginWahaChannel
 
         $to = $message->to;
         if(empty($to))
-            $to = $notifiable->routeNotificationFor('h-waha-channel', $notification);
+            $to = $notifiable->routeNotificationFor('h-waha', $notification);
 
         if(empty($to))
             return $to;
 
-        $exists = HPluginWaha::contacts()->checkExists(
+        $exists = HPluginWaha::contact()->checkExists(
             $to,
             $session,
         );
 
         if($exists['numberExists'])
             return HPluginWaha::chatting()->sendText(
-                $session,
                 $exists['chatId'],
                 trim($message->content),
+                session: $session,
             );
         
         return;

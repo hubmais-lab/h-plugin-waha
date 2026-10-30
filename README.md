@@ -79,7 +79,7 @@ class InvoicePaid extends Notification
     /**
      * Get the mail representation of the notification.
      */
-    public function toHWaha(object $notifiable): MailMessage
+    public function toHWaha(object $notifiable): HPluginWahaMessage
     {
         return (new HPluginWahaMessage)
             ->content("Hello, payment for order {$this->invoice->id} has been confirmed! Thank you for your purchase!");
