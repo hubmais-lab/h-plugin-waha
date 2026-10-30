@@ -26,6 +26,13 @@ class HPluginWahaMessage
      */
     public $to;
 
+    /**
+     * The session.
+     *
+     * @var HPluginWahaLink|null
+     */
+    public $link;
+
     function content(string $content)
     {
         $this->content = $content;
@@ -39,6 +46,12 @@ class HPluginWahaMessage
     }
 
     function to(string $to)
+    {
+        $this->to = $to;
+        return $this;    
+    }
+
+    function link(HPluginWahaLink $to)
     {
         $this->to = $to;
         return $this;    

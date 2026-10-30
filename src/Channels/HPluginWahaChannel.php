@@ -38,11 +38,26 @@ class HPluginWahaChannel
         );
 
         if($exists['numberExists'])
-            return HPluginWaha::chatting()->sendText(
-                $exists['chatId'],
-                trim($message->content),
-                session: $session,
-            );
+        {
+            if($message->link)
+                return HPluginWaha::chatting()->sendLinkCustomPreview(
+                    $exists['chatId'],
+                    trim($message->content),
+                    [
+                        'image' => ['url' => $message->link->image],
+                        'url' => $message->link->url,
+                        'title' => $message->link->title,
+                        'description' => $message->link->title
+                    ],
+                    session: $session,
+                );
+            else
+                return HPluginWaha::chatting()->sendText(
+                    $exists['chatId'],
+                    trim($message->content),
+                    session: $session,
+                );
+        }
         
         return;
     }
