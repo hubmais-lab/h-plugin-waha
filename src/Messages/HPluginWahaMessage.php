@@ -51,9 +51,9 @@ class HPluginWahaMessage
         return $this;    
     }
 
-    function link(HPluginWahaLink $to)
+    function link(HPluginWahaLink $link)
     {
-        $this->to = $to;
+        $this->link = $link;
         return $this;    
     }
 }
